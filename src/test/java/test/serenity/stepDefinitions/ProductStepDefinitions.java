@@ -37,8 +37,8 @@ public class ProductStepDefinitions {
 		productSteps.clickAddProduct();
 	}
 	
-	@When("^I add product \"([^\"]*)\"$")
-	public void i_add_product(String name) throws Exception {
+	@When("^I sendkey name product \"([^\"]*)\"$")
+	public void i_sendkey_name_product(String name) throws Exception {
 		productSteps.changeFieldProduct(name);
 	}
 	
@@ -55,11 +55,6 @@ public class ProductStepDefinitions {
 	@Then("^I on first product")
 	public void i_on_first_product(String name) throws Exception {
 		productSteps.onFirstProduct();
-	}
-	
-	@Then("^I edit product \"([^\"]*)\"$")
-	public void i_edit_product(String name) throws Exception {
-		productSteps.changeFieldProduct(name);
 	}
 	
 	@When("^I click view page$")
